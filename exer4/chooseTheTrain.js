@@ -93,9 +93,22 @@ function getTrainComingIn1Minute(arrivals) {
  *
  * railArray should not be modified after running this function!
  *
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 function updateLineColor(arrivals) {
   // TODO
+  let result = arrivals.filter(train => train.LINE.includes("BLUE"));
+  result = result.map(train => {
+    return {
+     ...train,
+     LINE: "PINK"
+    }
+   });
+  return result;
 }
 
 console.log(getKeysToArr(railArray));
