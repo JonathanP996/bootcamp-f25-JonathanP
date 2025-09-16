@@ -37,6 +37,11 @@ const railArray = await getRealTimeRailCoordinates();
  */
 function getKeysToArr(arrivals) {
   // TODO
+  let arr = [];
+  for (let keys in arrivals[0]){
+    arr.push(keys);
+  }
+  return arr;
 }
 
 /**
