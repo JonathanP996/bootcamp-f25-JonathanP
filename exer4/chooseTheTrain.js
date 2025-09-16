@@ -57,8 +57,14 @@ function getKeysToArr(arrivals) {
  * DO NOT MODIFY railArray! You'll need it for later
  */
 function getTrainComingIn1Minute(arrivals) {
-  // TODO
-}
+  let lateArrivals = [];
+  arrivals.forEach(function(train) {
+    if (train.WAITING_TIME == "1 min") {
+      lateArrivals.push(train);
+    }
+  })
+  return lateArrivals;
+  }
 
 /**
  * Task 3: Marta wants to change all Blue Rail Lines to be Pink Rail Lines
