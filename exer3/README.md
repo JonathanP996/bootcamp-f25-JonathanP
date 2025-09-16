@@ -1,4 +1,4 @@
-# LINK -> https://youtu.be/d8W2YwS9EOw
+# LINK -> [https://youtu.be/d8W2YwS9EOw](https://youtu.be/fFQn7l3vI-c](https://youtu.be/fFQn7l3vI-c)
 # Exercise 3 - Frontend Practice
 
 ## Description
