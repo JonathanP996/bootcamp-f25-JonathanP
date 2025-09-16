@@ -51,6 +51,8 @@
                 
                 <h1 class="mb-4">About Space Explorer</h1>
                 
+                <div id="searchMessage" class="alert alert-info" style="display: none;"></div>
+                
                 <p class="lead">Space Explorer is a simple search engine that helps you discover information about space and astronomy. Search for galaxies, Mars, black holes, or anything else cosmic, and explore the universe one search at a time.</p>
             </div>
         </div>
@@ -69,5 +71,15 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onload = function() {
+            const searchMessage = localStorage.getItem('searchMessage');
+            if (searchMessage) {
+                document.getElementById('searchMessage').textContent = searchMessage;
+                document.getElementById('searchMessage').style.display = 'block';
+                localStorage.removeItem('searchMessage');
+            }
+        };
+    </script>
 </body>
 </html>
