@@ -1,4 +1,5 @@
-# Exercise 5 — Mini Pokédex
+# # https://youtu.be/rPvt89n5UFo LINK TO VIDEO
+
 
 ## Description
 
