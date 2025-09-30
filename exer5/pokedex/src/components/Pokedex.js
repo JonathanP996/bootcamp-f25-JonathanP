@@ -111,36 +111,18 @@ const Pokedex = () => {
               <div className="info-content">
                 <div className="stat-item">
                   <span className="stat-label">height:</span>
-                  <span className="stat-value">0.3m</span>
+                  <span className="stat-value">{pokemon.height}</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-label">weight:</span>
-                  <span className="stat-value">4.0kg</span>
+                  <span className="stat-value">{pokemon.weight}</span>
                 </div>
-                <div className="stat-item">
-                  <span className="stat-label">hp:</span>
-                  <span className="stat-value">48</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-label">attack:</span>
-                  <span className="stat-value">48</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-label">defense:</span>
-                  <span className="stat-value">48</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-label">special-attack:</span>
-                  <span className="stat-value">48</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-label">special-defense:</span>
-                  <span className="stat-value">48</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-label">speed:</span>
-                  <span className="stat-value">48</span>
-                </div>
+                {pokemon.stats.map((stat, index) => (
+                  <div key={index} className="stat-item">
+                    <span className="stat-label">{stat.stat.name}:</span>
+                    <span className="stat-value">{stat.base_stat}</span>
+                  </div>
+                ))}
               </div>
             )}
           </div>
