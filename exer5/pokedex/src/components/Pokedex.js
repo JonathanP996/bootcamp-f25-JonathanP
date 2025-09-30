@@ -145,11 +145,11 @@ const Pokedex = () => {
               <div className="info-content">
                 <div className="stat-item">
                   <span className="stat-label">height:</span>
-                  <span className="stat-value">{pokemon.height}</span>
+                  <span className="stat-value">{(pokemon.height / 10).toFixed(1)}m</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-label">weight:</span>
-                  <span className="stat-value">{pokemon.weight}</span>
+                  <span className="stat-value">{(pokemon.weight / 10).toFixed(1)}kg</span>
                 </div>
                 {pokemon.stats.map((stat, index) => (
                   <div key={index} className="stat-item">
