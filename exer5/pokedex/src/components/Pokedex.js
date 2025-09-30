@@ -105,7 +105,11 @@ const Pokedex = () => {
           <div className="tab-content">
             {activeTab === 'moves' ? (
               <div className="moves-content">
-                <div className="move-item">transform</div>
+                {pokemon.moves.slice(0, 20).map((move, index) => (
+                  <div key={index} className="move-item">
+                    {move.move.name}
+                  </div>
+                ))}
               </div>
             ) : (
               <div className="info-content">
