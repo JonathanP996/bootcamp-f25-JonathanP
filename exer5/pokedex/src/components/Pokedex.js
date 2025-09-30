@@ -58,7 +58,7 @@ const Pokedex = () => {
           </div>
           
           <div className="pokemon-name">
-            ditto
+            {pokemon.name}
           </div>
           
           <div className="pokemon-types">
