@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { type: string } }
+  { params }: { params: Promise<{ type: string }> }
 ) {
   try {
-    const typeName = params.type.toLowerCase();
+    const { type } = await params;
+    const typeName = type.toLowerCase();
     
     const typeResponse = await fetch(`https://pokeapi.co/api/v2/type/${typeName}/`);
     

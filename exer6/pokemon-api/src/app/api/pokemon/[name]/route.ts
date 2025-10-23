@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { name: string } }
+  { params }: { params: Promise<{ name: string }> }
 ) {
   try {
-    const pokemonName = params.name.toLowerCase();
+    const { name } = await params;
+    const pokemonName = name.toLowerCase();
     
     // Fetch Pokemon data from PokeAPI
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}/`);
