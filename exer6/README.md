@@ -1,4 +1,4 @@
-# Exercise 6 - Poké API
+# https://youtu.be/opi76TqcQAkc
 
 ## Description
 
